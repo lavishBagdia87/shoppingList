@@ -1,0 +1,52 @@
+    .cart-product {
+        border: 0.5px solid #bbb3b3;
+        min-height: 20vh;
+        margin: 20px 10px;
+        padding: 20px 10px;
+        background-color: #fff;
+        text-align: center;
+    }
+    
+    .product-image {
+        max-height: 20vh;
+        max-width: 100%;
+    }
+    
+    .count-text-field {
+        max-width: 5vw;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    .product-name {
+        font-size: 0.75rem;
+        color: #b1aeae;
+    }
+    
+    .product-price {
+        margin-top: 10px;
+        font-size: 0.75rem;
+        color: #b1aeae;
+    }
+    
+    .seling-price {
+        font-weight: bold;
+        color: #4c4a4a
+    }
+    
+    .actual-price {
+        margin-left: 5px;
+        text-decoration: line-through;
+    }
+    
+    .discounted-price {
+        margin-left: 5px;
+        font-weight: bold;
+        color: #2cda2c;
+    }
+    
+    .remove {
+        cursor: pointer;
+        color: #b1aeae;
+    }

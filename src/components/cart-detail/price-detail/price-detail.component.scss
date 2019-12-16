@@ -1,0 +1,30 @@
+.price-detail {
+    margin-top: 20px;
+    border: 0.5px solid #bbb3b3;
+    background-color: #fff;
+    .sub-heading {
+        padding: 15px;
+        margin: 0px;
+        border-bottom: 0.5px solid #bbb3b3;
+        color: #b1aeae;
+    }
+    .product {
+        padding: 10px 15px;
+        color: #7d7a7a;
+        font-size: 0.85rem;
+    }
+    .total-discount {
+        padding: 10px 0px;
+        color: #7d7a7a;
+        font-size: 0.85rem;
+    }
+    .total-payable {
+        border-top: 0.5px solid #bbb3b3;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 10px 0px;
+        color: #7d7a7a;
+        font-weight: bold;
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,28 @@
+<div class="price-detail">
+    <div class="sub-heading">Price Detail</div>
+    <div class="row" *ngFor="let product of products">
+        <div class="col-sm-12 product">
+            <span class="col-sm-5">price({{product.name}})</span>
+            <span class="col-sm-1">:</span>
+            <span class="col-sm-6"> <fa-icon [icon]="faRupeeSign">
+                </fa-icon>{{product.price}}</span>
+        </div>
+    </div>
+    <div class="row total-discount">
+        <div class="col-sm-12 ">
+            <span class="col-sm-5">Discuont</span>
+            <span class="col-sm-1">:</span>
+            <span class="col-sm-6"> (-<fa-icon [icon]="faRupeeSign">
+                </fa-icon>{{totalDiscount}})</span>
+        </div>
+    </div>
+    <div class="row total-payable">
+        <div class="col-sm-12">
+            <span class="col-sm-5" style="padding-left:0px">Total payable</span>
+            <span class="col-sm-1">:</span>
+            <span class="col-sm-6"><fa-icon [icon]="faRupeeSign">
+                </fa-icon>{{totalPayable}}</span>
+        </div>
+    </div>
+
+</div>

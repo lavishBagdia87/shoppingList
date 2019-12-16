@@ -1,0 +1,6 @@
+<a class="cart-link" routerLink="/cartDetail">
+    <span class="shopping-cart">
+   <span [ngClass]="{'batch':isBatchVisible, 'hide-batch':!isBatchVisible }">{{selectedProductListCount}}</span>
+    <fa-icon [icon]="faShoppingCart"></fa-icon>
+    </span>
+</a>

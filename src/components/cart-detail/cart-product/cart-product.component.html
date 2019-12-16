@@ -1,0 +1,26 @@
+<div class="row cart-product">
+    <div class="col-sm-3"><img [src]='product.img_url' class="product-image" /></div>
+    <div class="col-sm-4">
+        <div class="product-name">{{product.name}}</div>
+        <div class="product-price">
+            <span class="seling-price"><fa-icon [icon]="faRupeeSign">
+                </fa-icon>{{priceAfterDiscount(product.price,product.discount)}}</span>
+            <span class="actual-price">{{product.price}}</span>
+            <span class="discounted-price">{{product.discount}} % off</span>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+        <span (click)="increaseCount(product)">
+        <fa-icon [icon]="faPlusCircle"></fa-icon>
+        </span>
+        <span><input class="count-text-field" type="text" [value]='product.count' [disabled]=true></span>
+        <span (click)="decreaseCount(product)">
+        <fa-icon [icon]="faMinusCircle"></fa-icon>
+        </span>
+    </div>
+
+    <div class="col-sm-1">
+        <span class="remove" title="remove" (click)="remove(product)">Remove</span>
+    </div>
+</div>

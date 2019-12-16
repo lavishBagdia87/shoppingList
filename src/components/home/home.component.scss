@@ -1,0 +1,34 @@
+.button {
+    border: 0.5px solid lightgray;
+    height: 5vh;
+    margin-bottom: 0px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.main-container {
+    margin: 0;
+    padding: 0;
+}
+
+.popup {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000038;
+    z-index: 3;
+    text-align: center;
+    left: 0;
+}
+
+.popup-body {
+    background-color: #fff;
+    max-width: 80vw;
+    margin: 10vw;
+    padding: 20px;
+}
+
+.close {
+    color: gray;
+    cursor: pointer;
+}

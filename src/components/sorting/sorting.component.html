@@ -1,0 +1,48 @@
+<ng-template [ngIf]="!isMobileResolution" [ngIfElse]="mobileView">
+    <div class=" row sorting">
+        <div class="col-sm-2 sub-heading" style="padding-left: 4vw;padding-right: 0px;">Sort By</div>
+        <div class="col-sm-10">
+            <ul>
+                <li [ngClass]="{'active':sortId === 1}" (click)="setSortId(1)">Price -- High Low</li>
+                <li [ngClass]="{'active':sortId === 2}" (click)="setSortId(2)">Price -- Low High</li>
+                <li [ngClass]="{'active':sortId === 3}" (click)="setSortId(3)">Discount</li>
+            </ul>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #mobileView>
+    <div class="container sorting ">
+        <div class="row sub-heading">sort Option</div>
+        <form #myForm="ngForm" (submit)="submitForm(myForm)" novalidate>
+
+            <div class="row radio-button">
+                <div class="col-sm-12">
+                    <input id="Price_High_Low" type="radio" class="custom-control-input" value="1" name="sort" ngModel required/>
+                    <label class="custom-control-label" for="Price_High_Low">Price -- High Low</label>
+                </div>
+            </div>
+            <div class="row radio-button">
+                <div class="col-sm-12">
+                    <input id="Price_Low_High" type="radio" class="custom-control-input" value="2" name="sort" ngModel required/>
+                    <label class="custom-control-label" for="Price_Low_High">Price -- Low High</label>
+                </div>
+            </div>
+            <div class="row radio-button">
+                <div class="col-sm-12">
+                    <input id="Discount" type="radio" class="custom-control-input" value="3" name="sort" ngModel required/>
+                    <label class="custom-control-label" for="Discount">Discount</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <button class="mobile-btn" title="cancel" (click)="cancel()">Cancel</button>
+                    <button type="submit" class="mobile-btn" title="Apply Filter">Apply</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</ng-template>

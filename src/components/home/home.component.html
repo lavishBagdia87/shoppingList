@@ -1,0 +1,45 @@
+<ng-template [ngIf]="!isMobileResolution" [ngIfElse]="mobileView">
+    <div class="row">
+        <div class="col-sm-2">
+            <app-filter #filter></app-filter>
+        </div>
+        <div class="col-sm-10">
+            <app-sorting #sort></app-sorting>
+            <product-list [filterDetails]='filter.getFilterDetails()' [sortBy]='sort.getSortId()'></product-list>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #mobileView>
+    <div *ngIf="isPopupOpen" class="row">
+        <div class="col">
+            <div class="popup">
+                <div *ngIf="isFilter" class="popup-body col-sm-12">
+                    <div (click)="close()" class="close">
+                        <fa-icon [icon]="faTimes"></fa-icon>
+                    </div>
+                    <app-filter [isMobileResolution]="isMobileResolution" (filerOption)="applyFilter($event)" (closePopup)="close($event)" #filter></app-filter>
+                </div>
+                <div *ngIf="isSort" class="popup-body col-sm-12">
+                    <div (click)="close()" class="close">
+                        <fa-icon [icon]="faTimes"></fa-icon>
+                    </div>
+                    <app-sorting [isMobileResolution]="isMobileResolution" (sortOption)="sortBy($event)" (closePopup)="close($event)" #sort></app-sorting>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div (click)="openSort()" class="col button">
+            <fa-icon [icon]="faSort"></fa-icon> Sort By
+        </div>
+        <div (click)="openFilter()" class="col button">
+            <fa-icon [icon]="faFilter"></fa-icon> Filter
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 main-container">
+            <product-list [filterDetails]='filterDetail' [sortBy]='sortId'></product-list>
+        </div>
+    </div>
+</ng-template>

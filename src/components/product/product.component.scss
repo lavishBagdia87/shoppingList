@@ -1,0 +1,52 @@
+.product {
+    float: left;
+    padding: 2vw;
+}
+
+.product-image {
+    max-height: 25vh;
+    margin-bottom: 5px;
+}
+
+.product-name {
+    font-size: 0.75rem;
+    color: #b1aeae;
+}
+
+.product-price {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: #b1aeae;
+}
+
+.seling-price {
+    font-weight: bold;
+    color: #4c4a4a
+}
+
+.actual-price {
+    margin-left: 5px;
+    text-decoration: line-through;
+}
+
+.discounted-price {
+    margin-left: 5px;
+    font-weight: bold;
+    color: #2cda2c;
+}
+
+.add-to-cart {
+    background-color: orange;
+    min-height: 5vh;
+    border-radius: 4vh;
+    font-family: verdana;
+    margin-top: 1vh;
+    margin-left: 2vh;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+    .product {
+        border: 0.5px solid lightgray;
+        padding: 6.33vw;
+    }
+}

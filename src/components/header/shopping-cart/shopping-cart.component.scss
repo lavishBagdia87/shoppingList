@@ -1,0 +1,28 @@
+.shopping-cart {
+    margin: 2vw;
+    margin-right: 5vw;
+    cursor: pointer;
+}
+
+.batch {
+    display: inline-block;
+    background-color: red;
+    color: #fff;
+    z-index: 3;
+    position: absolute;
+    border-radius: 7px;
+    min-width: 15px;
+    font-size: 0.65rem;
+    text-align: center;
+    bottom: vh;
+    top: 5px;
+    margin-left: 10px;
+}
+
+.hide-batch {
+    display: none;
+}
+
+.cart-link {
+    color: #fff
+}

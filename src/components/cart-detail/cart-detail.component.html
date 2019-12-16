@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col">
+        <div class="product-list" *ngFor="let product of products">
+            <cart-product [product]="product"></cart-product>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <price-detail></price-detail>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+.sorting {
+    li {
+        display: inline;
+        cursor: pointer;
+        color: #b1aeae;
+    }
+    li:not(:first-child) {
+        margin-left: 5vw;
+    }
+    ul {
+        margin-top: 3vh;
+        padding-left: 0px
+    }
+    .active {
+        color: #1976d2;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    .mobile-btn {
+        color: #1976d2;
+        background-color: #fff;
+        border: 0.5px solid lightgray;
+        text-align: center;
+        min-width: 30vw;
+        margin-top: 20px;
+    }
+    .radio-button {
+        margin-bottom: 20px;
+        text-align: left;
+        margin-left: 10vw;
+    }
+}

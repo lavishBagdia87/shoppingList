@@ -1,0 +1,33 @@
+<ng-template [ngIf]="!isMobileResolution" [ngIfElse]="mobileView">
+    <div class="container">
+        <div class="row sub-heading">Filter</div>
+        <div class="row">
+            <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ng5-slider>
+        </div>
+        <div class="row filter-price">
+            <div class="col-sm-12">Price</div>
+        </div>
+        <div class="row apply-btn-row">
+            <div class="col-sm-12">
+                <button class="apply-btn" title="Apply Filter" (click)="setFilterDetails()">Apply</button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template #mobileView>
+    <div class="container">
+        <div class="row sub-heading">Filter Option</div>
+        <div class="row">
+            <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ng5-slider>
+        </div>
+        <div class="row filter-price">
+            <div class="col-sm-12">Price</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <button class="mobile-btn" title="cancel" (click)="cancelFilter()">Cancel</button>
+                <button class="mobile-btn" title="Apply Filter" (click)="saveFilterDetail()">Apply</button>
+            </div>
+        </div>
+    </div>
+</ng-template>
