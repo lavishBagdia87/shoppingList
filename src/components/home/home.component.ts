@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
     this.isPopupOpen = true;
     this.isFilter = true;
   }
-  close(){
+  close(e:any){
     this.isSort = false;
     this.isFilter = false;
     this.isPopupOpen = false;

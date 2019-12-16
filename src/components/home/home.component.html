@@ -15,13 +15,13 @@
         <div class="col">
             <div class="popup">
                 <div *ngIf="isFilter" class="popup-body col-sm-12">
-                    <div (click)="close()" class="close">
+                    <div (click)="close($event)" class="close">
                         <fa-icon [icon]="faTimes"></fa-icon>
                     </div>
                     <app-filter [isMobileResolution]="isMobileResolution" (filerOption)="applyFilter($event)" (closePopup)="close($event)" #filter></app-filter>
                 </div>
                 <div *ngIf="isSort" class="popup-body col-sm-12">
-                    <div (click)="close()" class="close">
+                    <div (click)="close($event)" class="close">
                         <fa-icon [icon]="faTimes"></fa-icon>
                     </div>
                     <app-sorting [isMobileResolution]="isMobileResolution" (sortOption)="sortBy($event)" (closePopup)="close($event)" #sort></app-sorting>

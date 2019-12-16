@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class SortingComponent implements OnInit{
 
-  private sortId:number;
+  sortId:number;
   @Input()isMobileResolution = false;
   @Output()closePopup = new EventEmitter<any>();
   @Output() sortOption = new EventEmitter<number>();
